@@ -1,0 +1,29 @@
+{
+  "name": "button",
+  "version": "0.0.0",
+  "description": "button component",
+  "keywords": [
+    "button"
+  ],
+  "author": "fang.yang <yangfang2028@126.com>",
+  "homepage": "https://github.com/silence717/React-Typescript-Vite#readme",
+  "license": "ISC",
+  "main": "index.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silence717/React-Typescript-Vite.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/silence717/React-Typescript-Vite/issues"
+  }
+}
