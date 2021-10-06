@@ -1,1 +1,1 @@
-# React-Typescript-vite
+# React-Typescript-Vite
