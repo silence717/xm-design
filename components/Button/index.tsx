@@ -15,7 +15,7 @@ interface ButtonProps {
     disabled?: boolean;
     htmlType?: string;
     className?: string;
-    children: ReactChildren | string;
+    children?: ReactChildren | string;
 }
 
 function Button(props: ButtonProps) {

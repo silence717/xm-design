@@ -1,44 +1,37 @@
 import { useState } from 'react'
-import logo from './logo.svg'
-import { Button } from '../components';
+import { Button, Switch } from '../components';
 
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [checked, setChecked] = useState(false)
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
         <p>
           <Button type="primary" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
+              {String(count)}
           </Button>
         </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
+        <div>
+          <div>
+            不添加checked状态：
+            <Switch />
+          </div>
+
+          <div className="item">
+            设置checked为true：
+            <Switch size={"small"} checked={checked} />
+          </div>
+
+          <div>
+            设置开关的文案显示：
+            <Switch checked={checked} checkedText="这里是开" unCheckedText="这里是关" onChange={(checked: boolean) => setChecked(checked)} />
+          </div>
+        </div>
+
       </header>
     </div>
   )
