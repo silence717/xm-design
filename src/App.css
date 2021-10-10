@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .App {
-  text-align: center;
+  @apply text-center;
 }
 
 .App-logo {
