@@ -1,50 +1,61 @@
-import classNames from 'classnames';
-import { noop } from "../../utils";
-import './index.less';
+import classNames from 'classnames'
+import { noop } from '../../utils'
+import './index.less'
 
-const prefixCls = 'xm';
+const prefixCls = 'xm'
 
 type Size = 'default' | 'small'
 
 interface SwitchProps {
-    size?: Size
-    checked?: boolean
-    checkedText?: string
-    unCheckedText?: string
-    disabled?: boolean
-    onBeforeChange?: () => void
-    onChange?: (checked: boolean, event: any) => void
+  size?: Size
+  checked?: boolean
+  checkedText?: string
+  unCheckedText?: string
+  disabled?: boolean
+  onBeforeChange?: () => void
+  onChange?: (checked: boolean, event: any) => void
 }
 
 function Switch(props: SwitchProps) {
-    const { checked = false, checkedText = '', unCheckedText = '', size = 'default', disabled = false, onChange = noop, onBeforeChange = undefined } = props;
+  const {
+    checked = false,
+    checkedText = '',
+    unCheckedText = '',
+    size = 'default',
+    disabled = false,
+    onChange = noop,
+    onBeforeChange = undefined,
+  } = props
 
-    const prefix = `${prefixCls}-switch`;
+  const prefix = `${prefixCls}-switch`
 
-    const wrapper = classNames(prefix, {
-        [`${prefix}-small`]: size === 'small',
-        [`${prefix}-checked`]: checked,
-        [`${prefix}-disabled`]: disabled
-    });
+  const buttonPrefix = `${prefix}-button`
 
-    const handleClick = (event: any) => {
-        if (disabled) {
-            return;
-        }
+  const wrapper = classNames(buttonPrefix, {
+    [`${buttonPrefix}-small`]: size === 'small',
+    [`${buttonPrefix}-checked`]: checked,
+    [`${buttonPrefix}-disabled`]: disabled,
+  })
 
-        if (onBeforeChange) {
-            onBeforeChange();
-            return;
-        }
+  const handleClick = (event: any) => {
+    if (disabled) {
+      return
+    }
 
-        onChange(!checked, event);
-    };
+    if (onBeforeChange) {
+      onBeforeChange()
+      return
+    }
 
-    return (
-        <button type="button" className={wrapper} onClick={handleClick}>
-            <span className={`${prefix}-inner`}>{checked ? checkedText : unCheckedText}</span>
-        </button>
-    );
+    onChange(!checked, event)
+  }
+
+  return (
+    <div className={prefix}>
+      <div className={wrapper} onClick={handleClick} />
+      <span className={`${prefix}-text`}>{checked ? checkedText : unCheckedText}</span>
+    </div>
+  )
 }
 
 export default Switch

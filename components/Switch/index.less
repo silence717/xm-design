@@ -1,37 +1,36 @@
 @switch-prefix-cls: ~'xm-switch';
 
 .@{switch-prefix-cls} {
-  border-radius: 100px;
-  min-width: 44px;
-  height: 22px;
-  transition: all 0.36s;
+  @apply inline-flex items-center;
 
-  @apply box-border inline-block relative border border-solid border-transparent outline-none leading-none text-gray-01 text-sm align-middle cursor-pointer select-none bg-gray-05;
+  &-button {
+    border-radius: 100px;
+    width: 42px;
+    height: 22px;
+    transition: all 0.36s;
 
-  &::after {
-    width: 18px;
-    height: 18px;
-    border-radius: 18px;
-    transition: all 0.36s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-    content: ' ';
-    @apply absolute top-px left-px bg-gray-01;
-  }
+    @apply cursor-pointer box-border inline-block relative border border-solid border-transparent outline-none leading-none text-gray-01 text-sm align-middle cursor-pointer select-none bg-gray-05;
 
-  &-checked {
-    @apply bg-ultramarine-06;
+    &::after {
+      width: 18px;
+      height: 18px;
+      transition: all 0.36s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+      content: ' ';
+      @apply absolute rounded-full top-px left-px bg-gray-01;
+    }
 
-    &&::after {
-      @apply left-full -m-px;
-      transform: translateX(-100%);
+    &-checked {
+      @apply bg-ultramarine-06;
+
+      &&::after {
+        @apply left-full;
+        transform: translateX(-20px);
+      }
     }
   }
 
-  &-inner {
-    @apply block text-gray-01 text-xs pl-4;
-  }
-
-  &-checked &-inner {
-    @apply pl-0 pr-4;
+  &-text {
+    @apply block text-gray-09 text-sm pl-2;
   }
 
   &-disabled {
@@ -39,7 +38,7 @@
   }
 
   &-small {
-    min-width: 28px;
+    width: 30px;
     @apply text-xs h-4;
 
     &::after {
