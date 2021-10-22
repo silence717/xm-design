@@ -37,7 +37,7 @@ function App() {
 
         <p>
           <Button>默认</Button>
-          <Button className="mx-4" type="primary" onClick={() => setCount((count) => count + 1)}>
+          <Button className="mx-4" type="primary">
             {String(count)}
           </Button>
           <Button type="link">点击我</Button>
