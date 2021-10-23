@@ -1,4 +1,4 @@
 import noop from './noop'
+import sleep from './noop'
 
-
-export { noop }
+export { noop, sleep }
