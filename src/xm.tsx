@@ -1,11 +1,12 @@
-import { useState } from 'react'
-import { Button, Switch } from '../components'
+import React from 'react';
+import { useState } from 'react';
+import { Button, Switch } from '../components';
 
-import './App.css'
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-  const [checked, setChecked] = useState(false)
+function Xm() {
+  const [count, setCount] = useState(0);
+  const [checked, setChecked] = useState(false);
 
   return (
     <div className="text-center">
@@ -75,7 +76,7 @@ function App() {
         </div>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default Xm;
