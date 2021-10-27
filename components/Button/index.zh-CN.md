@@ -1,6 +1,13 @@
 ---
-title: Button
-path: /button
+title: 按钮
+order: 1000
+nav:
+  title: 组件
+  path: /components
+group:
+  title: 通用组件
+  path: /button
+  order: 1
 ---
 
 ## Button
