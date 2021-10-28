@@ -10,7 +10,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Foo } from 'React-Typescript-Vite';
+import { Foo } from 'xm-design';
 
 export default () => <Foo title="First Demo" />;
 ```

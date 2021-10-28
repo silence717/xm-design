@@ -1,7 +1,7 @@
 ---
 hero:
-  title: React-Typescript-Vite
-  desc: React-Typescript-Vite site example
+  title: xm-design
+  desc: xm-design site example
   actions:
     - text: 快速上手
       link: /zh-CN/docs/getting-started
@@ -18,4 +18,4 @@ features:
 footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
 ---
 
-## Hello React-Typescript-Vite!
+## Hello xm-design!
