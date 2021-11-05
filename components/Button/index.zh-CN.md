@@ -17,6 +17,8 @@ group:
 
 ### 基础使用
 
+[comment]: <> (<code src="./demo/base.tsx"></code>)
+
 ## API
 
 | 属性     | 说明                                                               | 类型            | 默认值    |
