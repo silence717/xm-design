@@ -1,4 +1,5 @@
 import { defineConfig } from 'dumi';
+import { resolve } from 'path';
 
 export default defineConfig({
   title: 'xm-design',
@@ -11,12 +12,15 @@ export default defineConfig({
   resolve: {
     includes: ['docs', 'components'],
   },
+  alias: {
+    'xm-design': resolve(__dirname, './components/index.ts'),
+  },
   navs: {
     'zh-CN': [
       null,
       {
         title: 'GitHub',
-        path: 'https://github.com/silence717/React-Typescript-Vite',
+        path: 'https://github.com/silence717/xm-design',
       },
     ],
   },
