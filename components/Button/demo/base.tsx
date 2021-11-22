@@ -3,7 +3,7 @@
  * desc.zh-CN: 在这个例子中， 按钮四种类型：主按钮、次按钮、虚线按钮、link按钮。
  */
 
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { Button } from 'xm-design';
 
 const blank = '\u00A0';

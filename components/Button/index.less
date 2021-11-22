@@ -4,11 +4,7 @@
   @apply rounded outline-none cursor-pointer leading-none duration-300;
 
   &.normal {
-    @apply text-gray-09 border border-solid border-gray-05 bg-gray-01;
-
-    &:hover {
-      @apply bg-gray-02;
-    }
+    @apply text-gray-09 border border-solid border-gray-05 bg-gray-01 hover:bg-gray-02;
   }
 
   &.primary {
@@ -19,12 +15,12 @@
     }
   }
 
-  &.link {
-    @apply text-ultramarine-06 border-none bg-transparent;
+  &.dashed {
+    @apply text-gray-09 border border-dashed border-gray-05 bg-gray-01 hover:bg-gray-02;
+  }
 
-    &:hover {
-      @apply text-ultramarine-05;
-    }
+  &.link {
+    @apply text-ultramarine-06 border-none bg-transparent hover:text-ultramarine-05;
   }
 
   /* size */

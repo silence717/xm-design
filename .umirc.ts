@@ -24,4 +24,11 @@ export default defineConfig({
       },
     ],
   },
+  tailwindcss: {},
+  // extraPostCSSPlugins: [
+  // eslint-disable-next-line
+  // require('postcss-import'),
+  // eslint-disable-next-line
+  // require('tailwindcss'),
+  // ],
 });
