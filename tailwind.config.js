@@ -1,7 +1,7 @@
-const colors = require('./tailwind-color')
+const colors = require('./tailwind-color');
 
 module.exports = {
-  mode: "jit",
+  mode: 'jit',
   corePlugins: {
     preflight: false,
     container: false,
@@ -15,15 +15,13 @@ module.exports = {
     backgroundBlendMode: false,
     accessibility: false,
   },
-  purge: [
-    "src/**/*.tsx"
-  ],
+  purge: ['components/**/*.tsx'],
   darkMode: false,
   theme: {
-    colors: colors
+    colors: colors,
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
