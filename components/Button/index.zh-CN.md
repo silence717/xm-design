@@ -11,13 +11,21 @@ group:
 
 # Button
 
-按钮的作用是对用户的触发作出反应并执行相应的操作命令。
+按钮。
 
 ## 代码演示
 
-### 基础使用
+### 按钮类型
 
 <code src="./demo/base.tsx"></code>
+
+### 不可用状态
+
+<code src="./demo/disabled.tsx"></code>
+
+### 加载中状态
+
+<code src="./demo/loading.tsx"></code>
 
 ## API
 
