@@ -5,6 +5,9 @@
 
   &.normal {
     @apply text-gray-09 border border-solid border-gray-05 bg-gray-01 hover:bg-gray-02;
+    &[disabled] {
+      @apply cursor-not-allowed text-gray-06 bg-gray-02;
+    }
   }
 
   &.primary {
@@ -13,14 +16,30 @@
     &:hover {
       @apply border-ultramarine-05 bg-ultramarine-05;
     }
+    &[disabled] {
+      @apply cursor-not-allowed border-ultramarine-03 bg-ultramarine-03;
+    }
   }
 
   &.dashed {
     @apply text-gray-09 border border-dashed border-gray-05 bg-gray-01 hover:bg-gray-02;
+    &[disabled] {
+      @apply cursor-not-allowed text-gray-06 bg-gray-02;
+    }
+  }
+
+  &.danger {
+    @apply text-gray-01 border border-solid border-red-06 bg-red-06;
+    &[disabled] {
+      @apply cursor-not-allowed border-red-03 bg-red-03;
+    }
   }
 
   &.link {
     @apply text-ultramarine-06 border-none bg-transparent hover:text-ultramarine-05;
+    &[disabled] {
+      @apply cursor-not-allowed text-ultramarine-03;
+    }
   }
 
   /* size */
@@ -32,23 +51,6 @@
   }
   &.small {
     @apply text-sm px-3 py-1;
-  }
-
-  /* disabled */
-  &[disabled] {
-    &.link {
-      &,
-      &:hover {
-        @apply text-gray-06 cursor-not-allowed border-none;
-      }
-    }
-
-    &:not(.link) {
-      &,
-      &:hover {
-        @apply text-gray-06 cursor-not-allowed bg-gray-03 border border-solid border-gray-05;
-      }
-    }
   }
 
   &-loading {

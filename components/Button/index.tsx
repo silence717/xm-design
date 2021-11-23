@@ -5,15 +5,15 @@ import './index.less';
 
 const prefixCls = 'xm';
 
+export type ButtonType = 'primary' | 'normal' | 'link' | 'dashed' | 'danger';
+export type ButtonSize = 'large' | 'default' | 'small';
+
 interface ButtonProps {
-  type?: string;
+  type?: ButtonType;
   size?: string;
   href?: string;
-  block?: string;
   loading?: boolean;
-  target?: string;
   disabled?: boolean;
-  htmlType?: string;
   className?: string;
   children?: ReactChildren | string;
 }
@@ -23,43 +23,33 @@ function Button(props: ButtonProps) {
     type = 'normal',
     size = 'default',
     href = '',
-    block = false,
     loading = false,
-    target = '',
     disabled = false,
-    htmlType = 'button',
     className = '',
     children,
     ...others
   } = props;
 
-  const ElementName = href ? 'a' : 'button';
   const classNames = classnames(
     `${prefixCls}-button`,
     {
       [type]: true,
       [size]: true,
-      block,
     },
     className,
   );
 
   return (
-    <ElementName
+    <button
       // @ts-ignore
       type="button"
       className={classNames}
       disabled={disabled || loading}
-      {...{
-        ...others,
-        href: href || undefined,
-        type: href ? undefined : htmlType,
-        target: href ? target : undefined,
-      }}
+      {...others}
     >
       {loading && <span className={`${prefixCls}-button-loading`} />}
       {children}
-    </ElementName>
+    </button>
   );
 }
 
