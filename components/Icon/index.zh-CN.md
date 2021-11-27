@@ -19,7 +19,7 @@ group:
 
 | 属性      | 说明                 | 类型                  | 默认值 |
 | --------- | -------------------- | --------------------- | ------ |
-| type      | 图标类型             | strinh                | -      |
+| type      | 图标类型             | string                | -      |
 | fontSize  | 图标字体大小         | string                | `16px` |
 | color     | 图标颜色             | string                | -      |
 | className | 样式类名称           | string                | -      |
