@@ -1,11 +1,16 @@
-# `Typography`
+---
+title: Typography 排版
+order: 1000
+nav:
+  title: 组件
+  path: /components
+group:
+  title: 通用组件
+  order: 1
+---
 
-> TODO: description
+# 排版
 
-## Usage
+## 代码演示
 
-```
-const typography = require('Typography');
-
-// TODO: DEMONSTRATE API
-```
+## API
