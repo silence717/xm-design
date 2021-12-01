@@ -1,19 +1,20 @@
-import classNames from 'classnames'
-import { noop } from '../../utils'
-import './index.less'
+import React from 'react';
+import classNames from 'classnames';
+import { noop } from '../../utils';
+import './index.less';
 
-const prefixCls = 'xm'
+const prefixCls = 'xm';
 
-type Size = 'default' | 'small'
+type Size = 'default' | 'small';
 
 interface SwitchProps {
-  size?: Size
-  checked?: boolean
-  checkedText?: string
-  unCheckedText?: string
-  disabled?: boolean
-  onBeforeChange?: () => void
-  onChange?: (checked: boolean, event: any) => void
+  size?: Size;
+  checked?: boolean;
+  checkedText?: string;
+  unCheckedText?: string;
+  disabled?: boolean;
+  onBeforeChange?: () => void;
+  onChange?: (checked: boolean, event: any) => void;
 }
 
 function Switch(props: SwitchProps) {
@@ -25,37 +26,41 @@ function Switch(props: SwitchProps) {
     disabled = false,
     onChange = noop,
     onBeforeChange = undefined,
-  } = props
+  } = props;
 
-  const prefix = `${prefixCls}-switch`
+  const prefix = `${prefixCls}-switch`;
+  const outerPrefix = classNames(prefix, {
+    [`${prefix}-disabled`]: disabled,
+  });
 
-  const buttonPrefix = `${prefix}-button`
+  const switchPrefix = `${prefix}-button`;
 
-  const wrapper = classNames(buttonPrefix, {
-    [`${buttonPrefix}-small`]: size === 'small',
-    [`${buttonPrefix}-checked`]: checked,
-    [`${buttonPrefix}-disabled`]: disabled,
-  })
+  const wrapper = classNames(switchPrefix, {
+    [`${switchPrefix}-small`]: size === 'small',
+    [`${switchPrefix}-checked`]: checked,
+  });
 
   const handleClick = (event: any) => {
     if (disabled) {
-      return
+      return;
     }
 
     if (onBeforeChange) {
-      onBeforeChange()
-      return
+      onBeforeChange();
+      return;
     }
 
-    onChange(!checked, event)
-  }
+    onChange(!checked, event);
+  };
 
   return (
-    <div className={prefix}>
+    <div className={outerPrefix}>
       <div className={wrapper} onClick={handleClick} />
-      <span className={`${prefix}-text`}>{checked ? checkedText : unCheckedText}</span>
+      <span className={`${prefix}-text`}>
+        {checked ? checkedText : unCheckedText}
+      </span>
     </div>
-  )
+  );
 }
 
-export default Switch
+export default Switch;

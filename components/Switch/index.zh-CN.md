@@ -17,7 +17,23 @@ group:
 
 <code src="./demo/base.tsx"></code>
 
-### API
+### 不可用状态
+
+<code src="./demo/disabled.tsx"></code>
+
+### 大小
+
+<code src="./demo/size.tsx"></code>
+
+### 带文本
+
+<code src="./demo/text.tsx"></code>
+
+### onBeforeChange
+
+<code src="./demo/onBeforeChange.tsx"></code>
+
+## API
 
 | 属性           | 说明                                | 类型                                     | 默认值  |
 | -------------- | ----------------------------------- | ---------------------------------------- | ------- |
