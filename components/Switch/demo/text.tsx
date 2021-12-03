@@ -3,24 +3,17 @@
  * desc.zh-CN: 可配置开启和关闭的文案。
  */
 
-import React, { useState } from 'react';
-import { Switch } from 'xm-design';
+import React, { useState } from 'react'
+import { Switch } from 'xm-design'
 
 function SwitchTextDemo() {
-  const [checked, setChecked] = useState<boolean>(true);
+  const [checked, setChecked] = useState<boolean>(true)
 
   const handleChange = (checked: boolean) => {
-    setChecked(checked);
-  };
+    setChecked(checked)
+  }
 
-  return (
-    <Switch
-      checked={checked}
-      onChange={handleChange}
-      checkedText="开"
-      unCheckedText="关"
-    />
-  );
+  return <Switch checked={checked} onChange={handleChange} checkedText="开" unCheckedText="关" />
 }
 
-export default SwitchTextDemo;
+export default SwitchTextDemo

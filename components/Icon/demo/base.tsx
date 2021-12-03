@@ -3,8 +3,8 @@
  * desc.zh-CN: 可配置图标的颜色、字体大小等其他
  */
 
-import React from 'react';
-import { Icon } from 'xm-design';
+import React from 'react'
+import { Icon } from 'xm-design'
 
 const icons = [
   'calendar',
@@ -39,7 +39,7 @@ const icons = [
   'info',
   'help',
   'warning',
-];
+]
 
 const Item = ({ type }: { type: string }) => {
   return (
@@ -47,8 +47,8 @@ const Item = ({ type }: { type: string }) => {
       <Icon type={type} fontSize={20} />
       <div className="mt-2">{type}</div>
     </div>
-  );
-};
+  )
+}
 
 export default function IconDemo() {
   return (
@@ -57,5 +57,5 @@ export default function IconDemo() {
         <Item key={index} type={item} />
       ))}
     </div>
-  );
+  )
 }

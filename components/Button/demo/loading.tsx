@@ -3,8 +3,8 @@
  * desc.zh-CN: 添加 loading 属性即可让按钮处于加载状态。
  */
 
-import React from 'react';
-import { Button } from 'xm-design';
+import React from 'react'
+import { Button } from 'xm-design'
 
 export default function LoadingButton() {
   return (
@@ -23,5 +23,5 @@ export default function LoadingButton() {
         Dashed
       </Button>
     </div>
-  );
+  )
 }

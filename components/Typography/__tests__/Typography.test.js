@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const typography = require('..');
+const typography = require('..')
 
 describe('Typography', () => {
-  it('needs tests');
-});
+  it('needs tests')
+})

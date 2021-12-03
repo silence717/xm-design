@@ -3,8 +3,8 @@
  * desc.zh-CN: 一般用于正文，不同类型显示不同大小和颜色。
  */
 
-import React from 'react';
-import { Typography } from 'xm-design';
+import React from 'react'
+import { Typography } from 'xm-design'
 
 function TypographyTextDemo() {
   return (
@@ -29,7 +29,7 @@ function TypographyTextDemo() {
         危险文本
       </Typography.Text>
     </div>
-  );
+  )
 }
 
-export default TypographyTextDemo;
+export default TypographyTextDemo

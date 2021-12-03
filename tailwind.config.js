@@ -1,4 +1,4 @@
-const colors = require('./tailwind-color');
+const colors = require('./tailwind-color')
 
 module.exports = {
   mode: 'jit',
@@ -24,4 +24,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-};
+}

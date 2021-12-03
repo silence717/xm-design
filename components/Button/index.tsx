@@ -1,21 +1,21 @@
-import React, { ReactChildren } from 'react';
-import classnames from 'classnames';
+import React, { ReactChildren } from 'react'
+import classnames from 'classnames'
 
-import './index.less';
+import './index.less'
 
-const prefixCls = 'xm';
+const prefixCls = 'xm'
 
-export type ButtonType = 'primary' | 'normal' | 'link' | 'dashed' | 'danger';
-export type ButtonSize = 'large' | 'default' | 'small';
+export type ButtonType = 'primary' | 'normal' | 'link' | 'dashed' | 'danger'
+export type ButtonSize = 'large' | 'default' | 'small'
 
 interface ButtonProps {
-  type?: ButtonType;
-  size?: string;
-  href?: string;
-  loading?: boolean;
-  disabled?: boolean;
-  className?: string;
-  children?: ReactChildren | string;
+  type?: ButtonType
+  size?: string
+  href?: string
+  loading?: boolean
+  disabled?: boolean
+  className?: string
+  children?: ReactChildren | string
 }
 
 function Button(props: ButtonProps) {
@@ -28,7 +28,7 @@ function Button(props: ButtonProps) {
     className = '',
     children,
     ...others
-  } = props;
+  } = props
 
   const classNames = classnames(
     `${prefixCls}-button`,
@@ -36,8 +36,8 @@ function Button(props: ButtonProps) {
       [type]: true,
       [size]: true,
     },
-    className,
-  );
+    className
+  )
 
   return (
     <button
@@ -50,7 +50,7 @@ function Button(props: ButtonProps) {
       {loading && <span className={`${prefixCls}-button-loading`} />}
       {children}
     </button>
-  );
+  )
 }
 
-export default Button;
+export default Button

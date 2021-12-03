@@ -3,8 +3,8 @@
  * desc.zh-CN: size="small" 表示小开关。
  */
 
-import React from 'react';
-import { Switch } from 'xm-design';
+import React from 'react'
+import { Switch } from 'xm-design'
 
 export default function SwitchSizeDemo() {
   return (
@@ -12,5 +12,5 @@ export default function SwitchSizeDemo() {
       <Switch checked />
       <Switch checked size="small" />
     </div>
-  );
+  )
 }

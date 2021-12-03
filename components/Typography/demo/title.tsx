@@ -3,8 +3,8 @@
  * desc.zh-CN: 一般用于标题，分大中小。
  */
 
-import React from 'react';
-import { Typography } from 'xm-design';
+import React from 'react'
+import { Typography } from 'xm-design'
 
 function TypographyTitleDemo() {
   return (
@@ -19,7 +19,7 @@ function TypographyTitleDemo() {
         小标题，字体为14px
       </Typography.Title>
     </div>
-  );
+  )
 }
 
-export default TypographyTitleDemo;
+export default TypographyTitleDemo

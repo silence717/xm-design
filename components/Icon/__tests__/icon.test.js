@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-const icon = require('..');
+const icon = require('..')
 
 describe('icon', () => {
-  it('needs tests');
-});
+  it('needs tests')
+})

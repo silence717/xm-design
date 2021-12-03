@@ -3,8 +3,8 @@
  * desc.zh-CN: 添加 `disabled` 属性即可让按钮处于不可用状态，同时按钮样式也会改变。
  */
 
-import React from 'react';
-import { Button } from 'xm-design';
+import React from 'react'
+import { Button } from 'xm-design'
 
 export default function DisabledButton() {
   return (
@@ -23,5 +23,5 @@ export default function DisabledButton() {
         Dashed
       </Button>
     </div>
-  );
+  )
 }
