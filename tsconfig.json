@@ -10,8 +10,8 @@
     "baseUrl": "./",
     "strict": true,
     "paths": {
-      "@/*": ["src/*"],
-      "@@/*": ["src/.umi/*"]
+      "@/*": ["components/*"],
+      "@@/*": [".umi/*"]
     },
     "allowSyntheticDefaultImports": true
   },
