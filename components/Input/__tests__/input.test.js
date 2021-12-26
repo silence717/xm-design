@@ -1,7 +1,5 @@
 'use strict'
 
-const input = require('..')
-
-describe('input', () => {
-  it('needs tests')
+xdescribe('input', () => {
+  xit('needs tests')
 })

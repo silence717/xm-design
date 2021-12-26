@@ -1,7 +1,4 @@
 'use strict'
-
-const typography = require('..')
-
-describe('Typography', () => {
-  it('needs tests')
+xdescribe('Typography', () => {
+  xit('needs tests')
 })

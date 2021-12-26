@@ -1,7 +1,5 @@
 'use strict'
 
-const icon = require('..')
-
-describe('icon', () => {
+xdescribe('icon', () => {
   it('needs tests')
 })

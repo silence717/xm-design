@@ -1,7 +1,10 @@
-'use strict'
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
+import Button from '../index'
 
-const button = require('..')
-
-describe('Button', () => {
-  it('needs tests')
+test('Button', () => {
+  const testButton = 'default'
+  render(<Button>{testButton}</Button>)
+  expect(screen.getByText(testButton)).toBeInTheDocument()
 })
