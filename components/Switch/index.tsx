@@ -55,7 +55,7 @@ function Switch(props: SwitchProps) {
 
   return (
     <div className={outerPrefix}>
-      <div className={wrapper} onClick={handleClick} />
+      <div className={wrapper} onClick={handleClick} data-testid="switchButton" />
       <span className={`${prefix}-text`}>{checked ? checkedText : unCheckedText}</span>
     </div>
   )
