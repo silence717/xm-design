@@ -30,4 +30,12 @@ describe('Switch', () => {
     fireEvent.click(switchElement)
     expect(handleChange).toBeCalled()
   })
+
+  it('should can not fire click event when disabled is true', () => {
+    const handleClick = jest.fn()
+    render(<Switch checked disabled checkedText={'on'} onChange={handleClick} />)
+    const switchElement = screen.getByTestId('switchButton')
+    fireEvent.click(switchElement)
+    expect(handleClick).not.toBeCalled()
+  })
 })

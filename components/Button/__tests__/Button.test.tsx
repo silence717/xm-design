@@ -15,12 +15,8 @@ describe('Button', () => {
     expect(buttonElement).toBeInTheDocument()
   })
 
-  it('should click button', () => {
-    const handleClick = jest.fn()
-
-    render(<Button onClick={handleClick}>button</Button>)
-    const buttonElement = screen.getByRole('button')
-    fireEvent.click(buttonElement)
-    expect(handleClick).toBeCalled()
+  it('should have loading class when loading is true ', () => {
+    const { container } = render(<Button loading>button</Button>)
+    expect(container.firstChild?.firstChild).toHaveClass('xm-button-loading')
   })
 })
