@@ -1,0 +1,14 @@
+@avatar-prefix-cls: ~'xm-avatar';
+
+.@{avatar-prefix-cls} {
+  @apply rounded-full flex-shrink-0;
+  &-container {
+    @apply relative w-full h-full rounded-full flex justify-center items-center text-gray-01 bg-ultramarine-06;
+  }
+  &-hover {
+    @apply absolute w-full h-full rounded-full invisible bg-gray-10 bg-opacity-10 group-hover:visible;
+  }
+  &-img {
+    @apply w-full h-full align-baseline;
+  }
+}
