@@ -13,15 +13,20 @@ group:
 
 ## 代码演示
 
-### 基础使用
+### 使用姓名首字母作为头像
 
 <code src="./demo/base.tsx"></code>
 
+### 使用图片作为头像
+
+<code src="./demo/img.tsx"></code>
+
 ## API
 
-| 属性     | 说明                                                               | 类型            | 默认值    |
-| -------- | ------------------------------------------------------------------ | --------------- | --------- |
-| disabled | 按钮失效状态                                                       | boolean         | `false`   |
-| size     | 设置按钮大小，可选值为 `large` `default` `small` 或者不设          | string          | `default` |
-| type     | 设置按钮类型，可选值为 `primary` `dashed` `link` `normal` 或者不设 | string          | `normal`  |
-| onClick  | 点击触发的回调                                                     | (event) => void | -         |
+| 属性      | 说明                                                       | 类型       | 默认值 |
+| --------- | ---------------------------------------------------------- | ---------- | ------ |
+| name      | 姓名，根据首字母显示头像                                   | string     |        |
+| size      | 设置按钮大小，可选值为 `xs` `sm` `base` `medium` `lg` `xl` | string     | `xs`   |
+| className | 自定义 className                                           | string     |        |
+| img       | 以图片作为头像                                             | string     |        |
+| onClick   | 点击触发的回调                                             | () => void |        |

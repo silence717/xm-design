@@ -2,6 +2,25 @@
 
 .@{avatar-prefix-cls} {
   @apply rounded-full flex-shrink-0;
+  &.xs {
+    @apply w-4 h-4 text-xs;
+  }
+  &.sm {
+    @apply w-5 h-5 text-xs;
+  }
+  &.base {
+    @apply w-6 h-6 text-sm;
+  }
+  &.medium {
+    @apply w-8 h-8 text-sm;
+  }
+  &.lg {
+    @apply w-10 h-10 text-2xl;
+  }
+  &.xl {
+    @apply w-16 h-16 text-4xl;
+  }
+
   &-container {
     @apply relative w-full h-full rounded-full flex justify-center items-center text-gray-01 bg-ultramarine-06;
   }
@@ -9,6 +28,6 @@
     @apply absolute w-full h-full rounded-full invisible bg-gray-10 bg-opacity-10 group-hover:visible;
   }
   &-img {
-    @apply w-full h-full align-baseline;
+    @apply w-full h-full align-baseline rounded-full;
   }
 }

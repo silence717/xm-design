@@ -1,7 +1,7 @@
-export type SIZE = 'xs' | 'sm' | 'small' | 'normal' | 'medium' | 'big'
+export type SIZE = 'xs' | 'sm' | 'base' | 'medium' | 'lg' | 'xl'
 
 export interface AvatarProps {
-  name?: string | undefined | null
+  name: string
   size?: SIZE
   img?: string
   className?: string

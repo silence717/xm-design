@@ -2,14 +2,14 @@ import React from 'react'
 import cls from 'classnames'
 
 import { AvatarProps } from './type'
-import getClasses from './getClasses'
 import './index.less'
+
 const prefixCls = 'xm'
 const prefix = `${prefixCls}-avatar`
 
 export default function Avatar(props: AvatarProps) {
-  const { name = '-', size = 'xs', img, className = '', onClick = () => null } = props
-  const classes = cls(prefix, getClasses(size), className)
+  const { name, size = 'xs', img = '', className = '', onClick = () => null } = props
+  const classes = cls(prefix, size, className)
 
   return (
     <div className={classes} onClick={onClick}>
