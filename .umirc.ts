@@ -12,6 +12,7 @@ export default defineConfig({
   },
   alias: {
     'xm-design': resolve(__dirname, './components/index.ts'),
+    constants: resolve(__dirname, './constants'),
   },
   navs: {
     'zh-CN': [

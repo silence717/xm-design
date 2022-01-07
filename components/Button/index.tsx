@@ -1,9 +1,7 @@
 import React, { ReactChildren } from 'react'
 import classnames from 'classnames'
-
+import { buttonPrefix } from 'constants/prefix'
 import './index.less'
-
-const prefixCls = 'xm'
 
 export type ButtonType = 'primary' | 'normal' | 'link' | 'dashed' | 'danger'
 export type ButtonSize = 'large' | 'default' | 'small'
@@ -31,7 +29,7 @@ function Button(props: ButtonProps) {
   } = props
 
   const classNames = classnames(
-    `${prefixCls}-button`,
+    `${buttonPrefix}`,
     {
       [type]: true,
       [size]: true,
@@ -47,7 +45,7 @@ function Button(props: ButtonProps) {
       disabled={disabled || loading}
       {...others}
     >
-      {loading && <span className={`${prefixCls}-button-loading`} />}
+      {loading && <span className={`${buttonPrefix}-loading`} />}
       {children}
     </button>
   )

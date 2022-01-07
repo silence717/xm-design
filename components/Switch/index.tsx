@@ -1,9 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
+import { switchPrefix } from 'constants/prefix'
 import { noop } from '../../utils'
 import './index.less'
-
-const prefixCls = 'xm'
 
 type Size = 'default' | 'small'
 
@@ -28,16 +27,15 @@ function Switch(props: SwitchProps) {
     onBeforeChange = undefined,
   } = props
 
-  const prefix = `${prefixCls}-switch`
-  const outerPrefix = classNames(prefix, {
-    [`${prefix}-disabled`]: disabled,
+  const outerPrefix = classNames(switchPrefix, {
+    [`${switchPrefix}-disabled`]: disabled,
   })
 
-  const switchPrefix = `${prefix}-button`
+  const switchButtonPrefix = `${switchPrefix}-button`
 
-  const wrapper = classNames(switchPrefix, {
-    [`${switchPrefix}-small`]: size === 'small',
-    [`${switchPrefix}-checked`]: checked,
+  const wrapper = classNames(switchButtonPrefix, {
+    [`${switchButtonPrefix}-small`]: size === 'small',
+    [`${switchButtonPrefix}-checked`]: checked,
   })
 
   const handleClick = (event: any) => {
@@ -56,7 +54,7 @@ function Switch(props: SwitchProps) {
   return (
     <div className={outerPrefix}>
       <div className={wrapper} onClick={handleClick} data-testid="switchButton" />
-      <span className={`${prefix}-text`}>{checked ? checkedText : unCheckedText}</span>
+      <span className={`${switchPrefix}-text`}>{checked ? checkedText : unCheckedText}</span>
     </div>
   )
 }
