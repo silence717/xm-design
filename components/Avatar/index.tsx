@@ -1,7 +1,7 @@
 import React from 'react'
 import cls from 'classnames'
 
-import { avatarPrefix } from 'constants/prefix'
+import { avatarPrefix } from '../../constants/prefix'
 import { AvatarProps } from './type'
 
 import './index.less'

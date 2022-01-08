@@ -1,6 +1,6 @@
 import React, { ReactChildren } from 'react'
 import classnames from 'classnames'
-import { buttonPrefix } from 'constants/prefix'
+import { buttonPrefix } from '../../constants/prefix'
 import './index.less'
 
 export type ButtonType = 'primary' | 'normal' | 'link' | 'dashed' | 'danger'

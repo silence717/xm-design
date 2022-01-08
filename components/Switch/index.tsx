@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { switchPrefix } from 'constants/prefix'
+import { switchPrefix } from '../../constants/prefix'
 import { noop } from '../../utils'
 import './index.less'
 
