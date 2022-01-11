@@ -1,0 +1,65 @@
+@import '../styles/index';
+
+@message-prefix-cls: ~'xm-message';
+@top: 42px;
+
+.@{message-prefix-cls} {
+  @apply top-0 left-1/2 flex items-center px-7 py-[8px] mx-auto my-[8px] rounded text-sm opacity-0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1010;
+  transform: translateX(-50%);
+
+  &.fixed {
+    position: fixed;
+  }
+  &.absolute {
+    position: absolute;
+  }
+
+  animation-name: open;
+  animation-fill-mode: forwards;
+
+  @keyframes open {
+    0% {
+      top: 0;
+      opacity: 0;
+    }
+    30% {
+      top: @top;
+      opacity: 1;
+    }
+    100% {
+      top: @top;
+      opacity: 1;
+    }
+  }
+
+  @keyframes close {
+    0% {
+      top: @top;
+      opacity: 1;
+    }
+    30% {
+      opacity: 0.1;
+      top: 20px;
+    }
+    100% {
+      top: 0;
+      opacity: 0;
+    }
+  }
+
+  &.success {
+    @apply bg-green-06 text-gray-01;
+  }
+  &.info {
+    @apply bg-yellow-04 text-gray-09;
+  }
+  &.warning {
+    @apply bg-yellow-04 text-gray-09;
+  }
+  &.danger,
+  &.error {
+    @apply bg-red-06 text-gray-01;
+  }
+}
