@@ -11,6 +11,12 @@ export default function MessageDemo() {
   const handleInfoClick = () => {
     message.info('this is info message')
   }
+  const handleWarningClick = () => {
+    message.warning('this is warning message')
+  }
+  const handleDangerClick = () => {
+    message.danger('this is danger message')
+  }
 
   return (
     <div className="flex gap-2">
@@ -21,6 +27,8 @@ export default function MessageDemo() {
         error
       </Button>
       <Button onClick={handleInfoClick}>info</Button>
+      <Button onClick={handleWarningClick}>warning</Button>
+      <Button onClick={handleDangerClick}>danger</Button>
     </div>
   )
 }
