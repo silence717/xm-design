@@ -6,7 +6,7 @@ nav:
   path: /components
 group:
   title: 反馈
-  order: 1
+  order: 3
 ---
 
 # 开关
