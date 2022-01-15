@@ -1,12 +1,44 @@
-import React from 'react'
+import React, { CSSProperties, ReactElement, ReactNode } from 'react'
+import cls from 'classnames'
+
+import { radioPrefix } from '../../constants/prefix'
+
+import './index.less'
 
 interface Props {
-  checked: boolean
+  value: string | number
+  checked?: boolean
+  disabled?: boolean
+  children: ReactElement
+  style: CSSProperties
+  className?: string
+  onChange: (value: string | number, event: any) => void
 }
 
 function Radio(props: Props) {
-  const { checked } = props
-  return <div checked>123</div>
+  const { value, checked = false, className = '', disabled, style, children, onChange, ...restProps } = props
+
+  const handleChange = (evt: any) => {
+    if (disabled) return
+    onChange(value, evt)
+  }
+
+  return (
+    <label className={`${radioPrefix} ${className}`} style={style}>
+      <span className={`${radioPrefix}-wrapper`}>
+        <input
+          {...restProps}
+          type="radio"
+          checked={checked}
+          disabled={disabled}
+          className={`${radioPrefix}-input`}
+          onChange={handleChange}
+        />
+        <span className={`${radioPrefix}-inner`} />
+      </span>
+      <span className={cls(`${radioPrefix}-text`, { disabled })}>{children}</span>
+    </label>
+  )
 }
 
 export default Radio
