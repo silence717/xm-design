@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement, ReactNode } from 'react'
+import React, { CSSProperties, ReactElement } from 'react'
 import cls from 'classnames'
 
 import { radioPrefix } from '../../constants/prefix'
@@ -12,7 +12,7 @@ interface Props {
   children: ReactElement
   style: CSSProperties
   className?: string
-  onChange: (value: string | number, event: any) => void
+  onChange?: (value: string | number, event: any) => void
 }
 
 function Radio(props: Props) {
@@ -20,7 +20,7 @@ function Radio(props: Props) {
 
   const handleChange = (evt: any) => {
     if (disabled) return
-    onChange(value, evt)
+    onChange && onChange(value, evt)
   }
 
   return (

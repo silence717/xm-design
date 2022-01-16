@@ -1,11 +1,18 @@
-# `Radio`
+---
+title: Radio 单选
+order: 1000
+nav:
+  title: 组件
+  path: /components
+group:
+  title: 数据录入
+  order: 2
+---
 
-> TODO: description
+# 单选
 
-## Usage
+## 代码演示
 
-```
-const radio = require('Radio');
+### 基本使用
 
-// TODO: DEMONSTRATE API
-```
+<code src="./demo/base.tsx"></code>
