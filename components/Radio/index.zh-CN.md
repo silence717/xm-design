@@ -16,3 +16,7 @@ group:
 ### 基本使用
 
 <code src="./demo/base.tsx"></code>
+
+### 禁用状态
+
+<code src="./demo/disabled.tsx"></code>
