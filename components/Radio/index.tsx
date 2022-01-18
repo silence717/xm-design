@@ -2,6 +2,7 @@ import React, { CSSProperties, ReactElement } from 'react'
 import cls from 'classnames'
 
 import { radioPrefix } from '../../constants/prefix'
+import Group from './group'
 
 import './index.less'
 
@@ -40,5 +41,7 @@ function Radio(props: Props) {
     </label>
   )
 }
+
+Radio.Group = Group
 
 export default Radio

@@ -20,3 +20,7 @@ group:
 ### 禁用状态
 
 <code src="./demo/disabled.tsx"></code>
+
+### 单选组合
+
+<code src="./demo/group.tsx"></code>
