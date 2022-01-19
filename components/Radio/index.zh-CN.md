@@ -24,3 +24,7 @@ group:
 ### 单选组合
 
 <code src="./demo/group.tsx"></code>
+
+### 单选组合（垂直布局）
+
+<code src="./demo/verticalGroup.tsx"></code>
