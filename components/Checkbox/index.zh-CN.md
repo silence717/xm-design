@@ -1,5 +1,5 @@
 ---
-title: Radio 多选
+title: Checkbox 多选
 order: 1000
 nav:
   title: 组件
@@ -16,3 +16,7 @@ group:
 ### 基本使用
 
 <code src="./demo/base.tsx"></code>
+
+### 受控的 Checkbox
+
+<code src="./demo/controlled.tsx"></code>
