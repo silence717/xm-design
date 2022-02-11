@@ -17,7 +17,7 @@ interface Props {
 }
 
 function Radio(props: Props) {
-  const { value, checked = false, className = '', disabled, style, children, onChange, ...restProps } = props
+  const { value, checked = false, className = '', disabled = false, style, children, onChange, ...restProps } = props
 
   const handleChange = (evt: any) => {
     if (disabled) return

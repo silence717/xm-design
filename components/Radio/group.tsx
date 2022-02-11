@@ -1,12 +1,12 @@
-import React, { Children, cloneElement, ReactElement, ReactNode, useEffect, useMemo, useState } from 'react'
+import React, { Children, cloneElement, ReactElement, useEffect, useMemo, useState } from 'react'
 import cls from 'classnames'
 import { radioPrefix } from '../../constants/prefix'
 import Radio from './index'
 
 interface Props {
   children: ReactElement
-  defaultValue: ReactNode
-  value: ReactNode
+  defaultValue: string | number
+  value: string | number
   onChange: (value: string | number, event: any) => void
   disabled: boolean
   horizontal: boolean
